@@ -1,0 +1,231 @@
+.calculation-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f4f7;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .calculation-result h1,
+  .calculation-result h2,
+  .calculation-result h3,
+  .calculation-result h4 {
+    color: #003366;
+  }
+  
+  .calculation-result h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .calculation-result h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .calculation-result h3 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+  
+  .calculation-result p {
+    font-size: 1.3rem;
+    color: #0077b6;
+  }
+  
+  /* Section layout with box shadow */
+  .calculation-result .section {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .calculation-result .section:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Time info with cleaner sectioning */
+  .calculation-result .time-info {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .time-info div {
+    text-align: center;
+  }
+  
+  .time-info p {
+    margin: 5px 0;
+  }
+  
+  /* Clock container with shadows */
+  .calculation-result .clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 40%;
+  }
+  
+  .calculation-result .clock-container:hover {
+    background: #f1f9ff;
+    transform: translateY(-5px);
+  }
+  
+  .calculation-result .clock-container h3 {
+    margin-bottom: 10px;
+    color: #003366;
+  }
+
+  .current-clock {
+    width: 40%;
+  }
+
+  .calculated-clock {
+    width: 40%;
+  }
+
+  .current-clock:hover {
+    background: #f1f9ff;
+    transform: translateY(-5px);
+  }
+
+  .calculated-clock:hover {
+    background: #f1f9ff;
+    transform: translateY(-5px);
+  }
+
+  .dig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dig .overflow {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 0;
+  }
+  
+  .dig-day,
+  .dig-date,
+  .dig-year,
+  .dig-time {
+    font-size: 1.2rem;
+    color: #003366;
+  }
+  
+  .dig-day {
+    font-weight: bold;
+  }
+  
+  .dig-time {
+    font-size: 1.8rem;
+    color: #ff6600;
+    font-weight: bold;
+  }
+  
+  .analog-clock {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .analog-clock svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .digital-clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .digital-clock-container h4 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #003366;
+  }
+  
+  .digital-clock {
+    font-size: 2.5rem;
+    color: #ff6600;
+    font-weight: bold;
+  }
+  
+  /* Section-specific design */
+  .section-title {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .section-divider {
+    border-top: 2px solid #e6e6e6;
+    margin: 20px 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .time-info {
+      flex-direction: column;
+    }
+  
+    .clock-container {
+      margin: 10px 0;
+    }
+  
+    .calculation-result h1 {
+      font-size: 1.8rem;
+    }
+  
+    .calculation-result h2 {
+      font-size: 1.2rem;
+    }
+  
+    .calculation-result h3 {
+      font-size: 1rem;
+    }
+  
+    .digital-clock {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .clock-container {
+      padding: 10px;
+    }
+  
+    .dig-time {
+      font-size: 1.5rem;
+    }
+  
+    .analog-clock {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
