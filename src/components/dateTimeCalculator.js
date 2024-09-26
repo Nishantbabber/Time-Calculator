@@ -1,14 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../style/homepage.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const DateTimeCalculator = () => {
 
     const navigate = useNavigate();
+    const location = useLocation();
     const [inputNumber, setInputNumber] = useState('');
     const [timePeriod, setTimePeriod] = useState('hours-ago-from-now');
     const [recentSearches, setRecentSearches] = useState([]);
 
+    // Extract number and period from the URL on component mount
+    useEffect(() => {
+        const path = location.pathname.slice(1); // Remove the leading '/'
+        const [number, ...periodParts] = path.split('-');
+        const period = periodParts.join('-'); // Recombine the remaining parts for the time period
+
+        if (number && period) {
+            setInputNumber(number);
+            setTimePeriod(period);
+        }
+    }, [location.pathname]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,9 +38,7 @@ const DateTimeCalculator = () => {
         navigate(url);
     };
 
-
     return (
-
         <div className="calculator-container">
             <h2>Date and Time Calculator</h2>
             <form onSubmit={handleSubmit} className="calculator-form">

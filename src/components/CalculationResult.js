@@ -183,15 +183,17 @@ const CalculationResult = () => {
             <h1>Calculation Result</h1>
             {errorMessage && <p>{errorMessage}</p>}
             {calculatedTime ? (
-                <div style={{ textAlign: 'center', fontFamily: 'Arial, sans-serif', padding: '20px' }}>
-                    <h1>What time was {calculationPath.replace(/-/g, ' ')}?</h1>
-                    <h2> The time {calculationPath.replace(/-/g, ' ')} ({formatTime(currentTime)} {formatDate(currentTime)}) was {formatTime(calculatedTime)} {formatDate(calculatedTime)}.</h2>
-                    <p>
-                        Current Time: {formatTime(currentTime)} {formatDate(currentTime)}                    
-                    </p>
+                <div style={{ textAlign: 'center', fontFamily: 'Arial, sans-serif', padding: '20px', width: '100%' }}>
+                    <div>
+                        <h1>What time was {calculationPath.replace(/-/g, ' ')}?</h1>
+                        <h2>{formatTime(calculatedTime)}</h2>
+                        <p style={{ color: '#003366', fontWeight: 'bold' }}>{formatDate(calculatedTime)}</p>
+                        <p>
+                            Current Time: {formatTime(currentTime)} {formatDate(currentTime)}
+                        </p>
+                    </div>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
-
-                    <DateTimeCalculator/>
+                        <DateTimeCalculator />
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px', border: '1px solid #ddd', backgroundColor: '#fff' }}>
                         <div>
