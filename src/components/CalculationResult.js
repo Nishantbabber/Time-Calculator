@@ -4,6 +4,7 @@ import Clock from 'react-clock';
 import 'react-clock/dist/Clock.css';
 import '../style/CalculationResult.css';
 import Header from './header';
+import DateTimeCalculator from './dateTimeCalculator';
 
 
 const CalculationResult = () => {
@@ -184,10 +185,14 @@ const CalculationResult = () => {
             {calculatedTime ? (
                 <div style={{ textAlign: 'center', fontFamily: 'Arial, sans-serif', padding: '20px' }}>
                     <h1>What time was {calculationPath.replace(/-/g, ' ')}?</h1>
-                    <h2>Current Time: {formatTime(currentTime)} {formatDate(currentTime)}</h2>
+                    <h2> The time {calculationPath.replace(/-/g, ' ')} ({formatTime(currentTime)} {formatDate(currentTime)}) was {formatTime(calculatedTime)} {formatDate(calculatedTime)}.</h2>
                     <p>
-                        The time {calculationPath.replace(/-/g, ' ')} ({formatTime(currentTime)} {formatDate(currentTime)}) was {formatTime(calculatedTime)} {formatDate(calculatedTime)}.
+                        Current Time: {formatTime(currentTime)} {formatDate(currentTime)}                    
                     </p>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+
+                    <DateTimeCalculator/>
+                    </div>
                     <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px', border: '1px solid #ddd', backgroundColor: '#fff' }}>
                         <div>
                             <h4>Time {calculationPath.replace(/-/g, ' ')}:</h4>
