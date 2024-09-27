@@ -195,7 +195,7 @@ const CalculationResult = () => {
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <DateTimeCalculator />
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px', border: '1px solid #ddd', backgroundColor: '#fff' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px', border: '1px solid #ddd', backgroundColor: '#fff', boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.1)' }}>
                         <div>
                             <h4>Time {calculationPath.replace(/-/g, ' ')}:</h4>
                             <p style={{fontSize: '2rem'}}>{formatTime(calculatedTime)}</p>
@@ -204,7 +204,7 @@ const CalculationResult = () => {
                         </div>
                         <div>
                             <h4>Current Time:</h4>
-                            <p>{formatTime(currentTime)}</p>
+                            <p style={{fontSize: '2rem'}}>{formatTime(currentTime)}</p>
                             <p>{formatDate(currentTime)}</p>
                             <p>{Intl.DateTimeFormat().resolvedOptions().timeZone}</p>
                         </div>
