@@ -183,10 +183,10 @@ const CalculationResult = () => {
             <h1>Calculation Result</h1>
             {errorMessage && <p>{errorMessage}</p>}
             {calculatedTime ? (
-                <div style={{ textAlign: 'center', fontFamily: 'Arial, sans-serif', padding: '20px', width: '100%' }}>
-                    <div>
+                <div style={{ textAlign: 'center', fontFamily: 'Arial, sans-serif', padding: '20px', width: '800px' }}>
+                    <div style={{ backgroundColor: 'white', boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.1)' }}>
                         <h1>What time was {calculationPath.replace(/-/g, ' ')}?</h1>
-                        <h2>{formatTime(calculatedTime)}</h2>
+                        <h2 style={{fontSize: '2rem'}}>{formatTime(calculatedTime)}</h2>
                         <p style={{ color: '#003366', fontWeight: 'bold' }}>{formatDate(calculatedTime)}</p>
                         <p>
                             Current Time: {formatTime(currentTime)} {formatDate(currentTime)}
@@ -198,7 +198,7 @@ const CalculationResult = () => {
                     <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px', border: '1px solid #ddd', backgroundColor: '#fff' }}>
                         <div>
                             <h4>Time {calculationPath.replace(/-/g, ' ')}:</h4>
-                            <p>{formatTime(calculatedTime)}</p>
+                            <p style={{fontSize: '2rem'}}>{formatTime(calculatedTime)}</p>
                             <p>{formatDate(calculatedTime)}</p>
                             <p>{Intl.DateTimeFormat().resolvedOptions().timeZone}</p>
                         </div>
